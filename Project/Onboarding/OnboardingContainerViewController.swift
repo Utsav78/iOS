@@ -3,20 +3,23 @@
 import UIKit
 
 class OnboardingContainerViewController: UIViewController {
-
+    
     let pageViewController: UIPageViewController
     var pages = [UIViewController]()
     var currentVC: UIViewController {
         didSet {
+            
         }
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
-        let page1 = ViewController1()
-        let page2 = ViewController2()
-        let page3 = ViewController3()
+        let page1 = OnboardingViewController(heroImageName: "image1", titleText: "Bitcoin is a decentralized digital currency that can be transferred on the peer-to-peer bitcoin network. Bitcoin transactions are verified by network nodes through cryptography and recorded in a public distributed ledger called a blockchain.")
+        
+        let page2 = OnboardingViewController(heroImageName: "image2", titleText: "Build and manage your crypto portfolio from your mobile device. Buy with your credit card, payment app, or bank account. Instantly swap between cryptocurrencies. Protect your returns by trading into USD stablecoins.")
+        
+        let page3 = OnboardingViewController(heroImageName: "image3", titleText: "Hold the keys to your digital assets in a wallet so secure, no one can access it except for you - not even us. Protect your money with passcode and biometric security features. Automatically back up all your wallets and restore access with a single custom password.")
         
         pages.append(page1)
         pages.append(page2)
@@ -86,27 +89,5 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return pages.firstIndex(of: self.currentVC) ?? 0
-    }
-}
-
-// MARK: - ViewControllers
-class ViewController1: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemRed
-    }
-}
-
-class ViewController2: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemGreen
-    }
-}
-
-class ViewController3: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBlue
     }
 }
