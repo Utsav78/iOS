@@ -12,6 +12,10 @@ protocol LoginViewControllerDelegate: AnyObject {
     func didLogin()
 }
 
+protocol LogoutViewControllerDelegate: AnyObject {
+    func didLogout()
+}
+
 
 
 class LoginViewController: UIViewController {
@@ -108,7 +112,7 @@ extension LoginViewController {
         }
         
         if username == "Utsav" && password == "test" {
-            signInButton.loadingIndicator(show: true)
+            //signInButton.loadingIndicator(show: true)
             signInButton.setTitle("", for: .normal)
             delegate?.didLogin()
             
