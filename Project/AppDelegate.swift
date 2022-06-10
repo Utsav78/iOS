@@ -11,6 +11,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    let loginViewController = LoginViewController()
+    let onboardingContainerViewController = OnboardingContainerViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -19,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .systemBackground
         //window?.rootViewController = LoginViewController()
         //window?.rootViewController = OnboardingContainerViewController()
-        window?.rootViewController = OnboardingContainerViewController()
+        //window?.rootViewController = OnboardingContainerViewController()
+        loginViewController.delegate = self
+        onboardingContainerViewController.delegate = self
+        window?.rootViewController = onboardingContainerViewController
 
 
         
@@ -29,5 +34,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate: LoginViewControllerDelegate {
+    func didLogin() {
+        print("did login successfully")
+    }
+    
+    
+}
+
+extension AppDelegate: OnboardingContainerViewControllerDelegate {
+    func didFinishOnboarding() {
+        print("foo - Did onboard")
+    }
+    
+    
 }
 
