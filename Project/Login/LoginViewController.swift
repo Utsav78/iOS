@@ -113,7 +113,6 @@ extension LoginViewController {
         
         if username == "Utsav" && password == "test" {
             //signInButton.loadingIndicator(show: true)
-            signInButton.setTitle("", for: .normal)
             delegate?.didLogin()
             
         }else {
