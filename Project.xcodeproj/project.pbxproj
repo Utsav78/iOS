@@ -30,6 +30,7 @@
 		6AC496C6285395FB00FAFFB8 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC496C5285395FB00FAFFB8 /* LocalState.swift */; };
 		6AE16841285342310023C6A8 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE16840285342310023C6A8 /* DummyViewController.swift */; };
 		6AEA2277285C765F00FC5576 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEA2276285C765F00FC5576 /* Date+Utils.swift */; };
+		6AEA227C285C811C00FC5576 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEA227B285C811C00FC5576 /* AccountSummaryViewController+Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		6AC496C5285395FB00FAFFB8 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		6AE16840285342310023C6A8 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		6AEA2276285C765F00FC5576 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		6AEA227B285C811C00FC5576 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				6AAD6AA42857477C00269503 /* AccountSummaryViewController.swift */,
 				6A2175CA28578BD500C94533 /* Header */,
 				6A8837C328578EB7002E515C /* Cells */,
+				6AEA227B285C811C00FC5576 /* AccountSummaryViewController+Networking.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				6AAD6AA52857477C00269503 /* AccountSummaryViewController.swift in Sources */,
 				6A41241328505B7C00D47295 /* AppDelegate.swift in Sources */,
 				6A82CF9A2852019200CB6ECD /* OnboardingContainerViewController.swift in Sources */,
+				6AEA227C285C811C00FC5576 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
