@@ -5,6 +5,7 @@ class AccountSummaryViewController: UIViewController {
     
     //Request models
     var profile: Profile?
+    var accounts: [Account] = []
     
     
    //viewmodels
@@ -148,8 +149,16 @@ extension AccountSummaryViewController {
                 print(error.localizedDescription)
             }
         }
-
-        fetchAccounts()
+        fetchAccounts(forUserId: "1") { result in
+            switch result {
+            case .success(let accounts):
+                self.accounts = accounts
+                self.configureTableCells(with: accounts)
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func configureTableHeaderView(with profile: Profile) {
@@ -157,6 +166,14 @@ extension AccountSummaryViewController {
                                                     name: profile.firstName,
                                                     date: Date())
         headerView.configure(viewModel: vm)
+    }
+    
+    private func configureTableCells(with accounts: [Account]) {
+        accountCellViewModels = accounts.map {
+            AccountSummaryCell.ViewModel(accountType: $0.type,
+                                         accountName: $0.name,
+                                         balance: $0.amount)
+        }
     }
 }
 
