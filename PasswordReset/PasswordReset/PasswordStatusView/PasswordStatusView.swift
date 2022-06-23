@@ -47,6 +47,7 @@ extension PasswordStatusView {
         stackView.axis = .vertical
         stackView.spacing = 8
         stackView.backgroundColor = .systemRed
+        stackView.distribution = .equalCentering // to fix the size of each cell so that the size of circle remain same
         
         lengthCriteriaView.translatesAutoresizingMaskIntoConstraints = false
         uppercaseCriteriaView.translatesAutoresizingMaskIntoConstraints = false
