@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A62CC312865A0E200BE9EB9 /* PasswordCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A62CC302865A0E200BE9EB9 /* PasswordCriteria.swift */; };
 		6A785D952862C8A400A2FB58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A785D942862C8A400A2FB58 /* AppDelegate.swift */; };
 		6A785D992862C8A400A2FB58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A785D982862C8A400A2FB58 /* ViewController.swift */; };
 		6A785D9E2862C8A500A2FB58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A785D9D2862C8A500A2FB58 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A62CC302865A0E200BE9EB9 /* PasswordCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteria.swift; sourceTree = "<group>"; };
 		6A785D912862C8A400A2FB58 /* PasswordReset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordReset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A785D942862C8A400A2FB58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A785D982862C8A400A2FB58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				6A99261B286332BD00FDD956 /* PasswordCriteriaView.swift */,
 				6AAB47A42864377D00307F91 /* PasswordStatusView.swift */,
+				6A62CC302865A0E200BE9EB9 /* PasswordCriteria.swift */,
 			);
 			path = PasswordStatusView;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A785D992862C8A400A2FB58 /* ViewController.swift in Sources */,
+				6A62CC312865A0E200BE9EB9 /* PasswordCriteria.swift in Sources */,
 				6A785D952862C8A400A2FB58 /* AppDelegate.swift in Sources */,
 				6A99261C286332BD00FDD956 /* PasswordCriteriaView.swift in Sources */,
 				6AAB47A52864377D00307F91 /* PasswordStatusView.swift in Sources */,
