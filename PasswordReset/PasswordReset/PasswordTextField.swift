@@ -10,9 +10,19 @@ import UIKit
 
 protocol PasswordTextFieldDelegate {
     func editingChanged(_ sender: PasswordTextField)
+    func editingDidEnd(_ sender: PasswordTextField) // add
+
 }
 
 class PasswordTextField: UIView {
+    
+    /**
+        A function one passes in to do custom validation on the text field.
+
+        - Parameter: textValue: The value of text to validate
+        - Returns: A Bool indicating whether text is valid, and if not a String containing an error message
+        */
+    typealias CustomValidation = (_ textValue: String?) -> (Bool, String)?
     
     let lockImageView = UIImageView(image: UIImage(systemName: "lock.fill"))
     let textField = UITextField()
@@ -21,7 +31,15 @@ class PasswordTextField: UIView {
     let dividerView = UIView()
     let errorLabel = UILabel()
     
-     var delegate: PasswordTextFieldDelegate?
+  
+    
+    var delegate: PasswordTextFieldDelegate?
+    var customValidation: CustomValidation?
+    
+    var text: String? {
+        get { return textField.text }
+        set { textField.text = newValue }
+    }
     
     init(placeHolderText: String) {
         self.placeHolderText = placeHolderText
@@ -150,7 +168,8 @@ extension PasswordTextField {
 //MARK: - UITextFieldDelegate
 extension PasswordTextField: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("foo - textfieldDidEndEditing: \(textField.text)")
+        //print("foo - textfieldDidEndEditing: \(textField.text)")
+        delegate?.editingDidEnd(self)
     }
     
     // Called when 'return' key pressed. Necessary for dismissing keyboard.
@@ -160,4 +179,30 @@ extension PasswordTextField: UITextFieldDelegate {
         return true
     }
     
+}
+
+// typealias CustomValidation = (_ textValue: String?) -> (Bool, String)?
+
+// MARK: - Validation
+extension PasswordTextField {
+    func validate() -> Bool {
+        if let customValidation = customValidation,
+            let customValidationResult = customValidation(text),
+            customValidationResult.0 == false {
+            showError(customValidationResult.1)
+            return false
+        }
+        clearError()
+        return true
+    }
+    
+    private func showError(_ errorMessage: String) {
+        errorLabel.isHidden = false
+        errorLabel.text = errorMessage
+    }
+
+    private func clearError() {
+        errorLabel.isHidden = true
+        errorLabel.text = ""
+    }
 }
