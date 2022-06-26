@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A4730982868BBA70064EEB7 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4730972868BBA70064EEB7 /* UIResponder+Utils.swift */; };
 		6A62CC312865A0E200BE9EB9 /* PasswordCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A62CC302865A0E200BE9EB9 /* PasswordCriteria.swift */; };
 		6A785D952862C8A400A2FB58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A785D942862C8A400A2FB58 /* AppDelegate.swift */; };
 		6A785D992862C8A400A2FB58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A785D982862C8A400A2FB58 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A4730972868BBA70064EEB7 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
 		6A62CC302865A0E200BE9EB9 /* PasswordCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteria.swift; sourceTree = "<group>"; };
 		6A785D912862C8A400A2FB58 /* PasswordReset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordReset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A785D942862C8A400A2FB58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A4730962868BB800064EEB7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6A4730972868BBA70064EEB7 /* UIResponder+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		6A785D882862C8A400A2FB58 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		6A785D932862C8A400A2FB58 /* PasswordReset */ = {
 			isa = PBXGroup;
 			children = (
+				6A4730962868BB800064EEB7 /* Utils */,
 				6A99261A2863328C00FDD956 /* PasswordStatusView */,
 				6A9926142862D04D00FDD956 /* Files */,
 				6A785D942862C8A400A2FB58 /* AppDelegate.swift */,
@@ -280,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A785D992862C8A400A2FB58 /* ViewController.swift in Sources */,
+				6A4730982868BBA70064EEB7 /* UIResponder+Utils.swift in Sources */,
 				6A62CC312865A0E200BE9EB9 /* PasswordCriteria.swift in Sources */,
 				6A785D952862C8A400A2FB58 /* AppDelegate.swift in Sources */,
 				6A99261C286332BD00FDD956 /* PasswordCriteriaView.swift in Sources */,
