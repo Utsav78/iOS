@@ -37,6 +37,8 @@
 		6AEA227C285C811C00FC5576 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEA227B285C811C00FC5576 /* AccountSummaryViewController+Networking.swift */; };
 		6AEB1494286027F200169C19 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEB1493286027F200169C19 /* ProfileTests.swift */; };
 		6AEB149C286028D300169C19 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEB149B286028D300169C19 /* AccountTests.swift */; };
+		6F292C3B2B5B3FFF00002297 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F292C3A2B5B3FFF00002297 /* SignupView.swift */; };
+		6F292C3D2B5B401A00002297 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F292C3C2B5B401A00002297 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		6AEA227B285C811C00FC5576 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		6AEB1493286027F200169C19 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		6AEB149B286028D300169C19 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		6F292C3A2B5B3FFF00002297 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		6F292C3C2B5B401A00002297 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 		6A41241128505B7C00D47295 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				6F292C392B5B3FCF00002297 /* Signup */,
 				6A16774D2856EEF0000C4B53 /* MainViewController.swift */,
 				6A41241228505B7C00D47295 /* AppDelegate.swift */,
 				6A41244C2850600A00D47295 /* Login */,
@@ -280,6 +285,15 @@
 				6A2D7B692861A256004E38BE /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		6F292C392B5B3FCF00002297 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				6F292C3A2B5B3FFF00002297 /* SignupView.swift */,
+				6F292C3C2B5B401A00002297 /* SignupViewController.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,10 +445,12 @@
 				6A1677492856E99D000C4B53 /* UIViewController+Utills.swift in Sources */,
 				6A16774E2856EEF0000C4B53 /* MainViewController.swift in Sources */,
 				6AAD6AA52857477C00269503 /* AccountSummaryViewController.swift in Sources */,
+				6F292C3D2B5B401A00002297 /* SignupViewController.swift in Sources */,
 				6A41241328505B7C00D47295 /* AppDelegate.swift in Sources */,
 				6A82CF9A2852019200CB6ECD /* OnboardingContainerViewController.swift in Sources */,
 				6AE6A89C2860CDF30085B1DD /* SkeletonLoadable.swift in Sources */,
 				6AEA227C285C811C00FC5576 /* AccountSummaryViewController+Networking.swift in Sources */,
+				6F292C3B2B5B3FFF00002297 /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
