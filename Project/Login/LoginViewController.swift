@@ -77,7 +77,6 @@ extension LoginViewController {
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1)
         ])
         
-        //button sign in
         NSLayoutConstraint.activate([
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
             signInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
@@ -112,7 +111,7 @@ extension LoginViewController {
         }
         
         if username == "Utsav" && password == "test" {
-            //signInButton.loadingIndicator(show: true)
+            // signInButton.loadingIndicator(show: true)
             delegate?.didLogin()
             
         }else {
@@ -138,8 +137,6 @@ extension LoginViewController {
         
         animation.isAdditive = true
         signInButton.layer.add(animation, forKey: "shake")
-        
-        
     }
 }
 
